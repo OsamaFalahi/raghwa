@@ -372,20 +372,68 @@
   .faq-item.open .faq-a{max-height:220px;}
 
   /* ===== Testimonials ===== */
-  .testi-grid{display:grid;grid-template-columns:1fr;gap:24px;}
-  .testi-card{
-    background:#fff;border-radius:var(--radius-md);padding:28px;box-shadow:var(--shadow-sm);
-    border-top:4px solid var(--gold);
+  .testi-slider{
+    position:relative;max-width:1000px;margin:0 auto;
   }
-  .stars{color:var(--gold);font-size:1.1rem;margin-bottom:14px;letter-spacing:2px;}
-  .testi-card p.txt{color:var(--ink-soft);font-size:.94rem;margin-bottom:20px;min-height:80px;}
-  .testi-author{display:flex;align-items:center;gap:12px;}
-  .testi-avatar{
-    width:44px;height:44px;border-radius:50%;background:var(--sky);color:var(--primary);
-    display:flex;align-items:center;justify-content:center;font-weight:800;font-family:'Cairo',sans-serif;
+  .testi-track{
+    position:relative;overflow:hidden;border-radius:var(--radius-lg);
+    box-shadow:var(--shadow-md);
   }
-  .testi-author strong{display:block;color:var(--primary);font-size:.92rem;}
-  .testi-author span{color:var(--ink-soft);font-size:.8rem;}
+  .testi-slides-container{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:16px;padding:16px;
+  }
+  @media(min-width:768px){
+    .testi-slides-container{
+      grid-template-columns:repeat(2,1fr);
+      gap:24px;
+      padding:24px;
+    }
+  }
+  .testi-slide{
+    opacity:0;transition:opacity 0.4s ease;
+  }
+  .testi-slide img{
+    width:100%;height:auto;display:block;border-radius:var(--radius-md);
+    border:1px solid rgba(45,57,148,.15);
+  }
+  .testi-nav{
+    display:flex;justify-content:center;align-items:center;gap:20px;margin-top:28px;
+  }
+  .testi-nav-btn{
+    width:54px;height:54px;border-radius:50%;background:var(--primary);color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:var(--shadow-sm);transition:transform .25s ease, background .25s ease;
+    border:2px solid var(--primary);
+  }
+  .testi-nav-btn:hover{
+    transform:translateY(-4px) scale(1.05);background:var(--primary-dark);
+    box-shadow:var(--shadow-md);
+  }
+  .testi-nav-btn:active{
+    transform:translateY(-2px) scale(0.98);
+  }
+  .testi-nav-btn:disabled{
+    opacity:.4;cursor:not-allowed;transform:none;background:var(--ink-soft);
+  }
+  .testi-dots{
+    display:flex;gap:12px;
+  }
+  .testi-dot{
+    width:14px;height:14px;border-radius:50%;background:rgba(45,57,148,.25);
+    transition:all .3s ease;cursor:pointer;
+  }
+  .testi-dot:hover{
+    background:rgba(45,57,148,.5);
+  }
+  .testi-dot.active{
+    background:var(--primary);transform:scale(1.2);
+  }
+  @media(max-width:480px){
+    .testi-nav-btn{width:48px;height:48px;}
+    .testi-nav{gap:14px;margin-top:20px;}
+  }
 
   /* ===== Final CTA ===== */
   .final-cta{
@@ -892,30 +940,31 @@
   <div class="container">
     <div class="eyebrow reveal center" style="display:block;text-align:center;">آراء العملاء</div>
     <h2 class="section-title reveal center">ماذا يقول عملاؤنا</h2>
-    <div class="testi-grid">
-      <div class="testi-card reveal">
-        <div class="stars">★★★★★</div>
-        <p class="txt">فريق محترف جداً والتزموا بالموعد المحدد، الواجهة الزجاجية أصبحت وكأنها جديدة تماماً.</p>
-        <div class="testi-author">
-          <div class="testi-avatar">م.س</div>
-          <div><strong>مدير مجمع تجاري</strong><span>الرياض</span></div>
+    <div class="testi-slider reveal">
+      <div class="testi-track">
+        <div class="testi-slides-container" id="testiContainer">
+          <div class="testi-slide">
+            <img src="https://raghaliabida.com/wp-content/uploads/2026/07/1.png" alt="رأي العميل الأول" loading="lazy">
+          </div>
+          <div class="testi-slide">
+            <img src="https://raghaliabida.com/wp-content/uploads/2026/07/2.png" alt="رأي العميل الثاني" loading="lazy">
+          </div>
+          <div class="testi-slide">
+            <img src="https://raghaliabida.com/wp-content/uploads/2026/07/3.png" alt="رأي العميل الثالث" loading="lazy">
+          </div>
+          <div class="testi-slide">
+            <img src="https://raghaliabida.com/wp-content/uploads/2026/07/4.png" alt="رأي العميل الرابع" loading="lazy">
+          </div>
         </div>
       </div>
-      <div class="testi-card reveal">
-        <div class="stars">★★★★★</div>
-        <p class="txt">تعاقدنا معهم بعقد سنوي لتنظيف الكلادينج، الجودة ثابتة في كل زيارة والأسعار مناسبة جداً.</p>
-        <div class="testi-author">
-          <div class="testi-avatar">ع.ح</div>
-          <div><strong>مالك برج تجاري</strong><span>الرياض</span></div>
-        </div>
-      </div>
-      <div class="testi-card reveal">
-        <div class="stars">★★★★★</div>
-        <p class="txt">جلي الرخام كان احترافياً جداً، الأرضية رجعت تلمع من جديد. أنصح بهم بقوة.</p>
-        <div class="testi-author">
-          <div class="testi-avatar">ن.ف</div>
-          <div><strong>صاحبة فيلا</strong><span>جدة</span></div>
-        </div>
+      <div class="testi-nav">
+        <button class="testi-nav-btn" id="testiPrev" aria-label="السابق">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="testi-dots"></div>
+        <button class="testi-nav-btn" id="testiNext" aria-label="التالي">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
       </div>
     </div>
   </div>
@@ -1161,6 +1210,75 @@ document.addEventListener('keydown', (e)=>{
     if(e.key === 'ArrowRight') document.getElementById('lbNext').click();
   }
 });
+
+// ===== Testimonials Slider =====
+const testiSlides = document.querySelectorAll('.testi-slide');
+const testiDots = document.querySelectorAll('.testi-dot');
+const testiPrev = document.getElementById('testiPrev');
+const testiNext = document.getElementById('testiNext');
+let currentTestiIndex = 0;
+let slidesPerView = window.innerWidth >= 768 ? 2 : 1;
+let totalGroups = Math.ceil(testiSlides.length / slidesPerView);
+
+function updateSlidesPerView(){
+  slidesPerView = window.innerWidth >= 768 ? 2 : 1;
+  totalGroups = Math.ceil(testiSlides.length / slidesPerView);
+  updateDots();
+  showTestiGroup(currentTestiIndex);
+}
+
+function updateDots(){
+  const dotsContainer = document.querySelector('.testi-dots');
+  dotsContainer.innerHTML = '';
+  for(let i = 0; i < totalGroups; i++){
+    const dot = document.createElement('span');
+    dot.className = 'testi-dot' + (i === currentTestiIndex ? ' active' : '');
+    dot.dataset.index = i;
+    dot.addEventListener('click', ()=>{
+      currentTestiIndex = i;
+      showTestiGroup(i);
+    });
+    dotsContainer.appendChild(dot);
+  }
+}
+
+function showTestiGroup(groupIndex){
+  testiSlides.forEach((slide, idx)=>{
+    const groupStart = groupIndex * slidesPerView;
+    const groupEnd = groupStart + slidesPerView;
+    if(idx >= groupStart && idx < groupEnd){
+      slide.style.display = 'block';
+      slide.style.opacity = '0';
+      setTimeout(()=> slide.style.opacity = '1', 50);
+    } else {
+      slide.style.display = 'none';
+    }
+  });
+  
+  document.querySelectorAll('.testi-dot').forEach((dot, idx)=>{
+    dot.classList.toggle('active', idx === groupIndex);
+  });
+  
+  testiPrev.disabled = groupIndex === 0;
+  testiNext.disabled = groupIndex >= totalGroups - 1;
+}
+
+testiPrev.addEventListener('click', ()=>{
+  if(currentTestiIndex > 0){
+    currentTestiIndex--;
+    showTestiGroup(currentTestiIndex);
+  }
+});
+
+testiNext.addEventListener('click', ()=>{
+  if(currentTestiIndex < totalGroups - 1){
+    currentTestiIndex++;
+    showTestiGroup(currentTestiIndex);
+  }
+});
+
+window.addEventListener('resize', updateSlidesPerView);
+updateSlidesPerView();
 </script>
 </body>
 </html>
