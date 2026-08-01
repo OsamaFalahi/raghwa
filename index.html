@@ -162,13 +162,17 @@
   /* ===== Hero ===== */
   .hero{
     position:relative;padding:120px 0 60px;overflow:hidden;
-    background-image:
-      linear-gradient(160deg, rgba(23,29,74,.92) 0%, rgba(32,42,112,.88) 45%, rgba(45,57,148,.80) 100%),
-      url('https://raghaliabida.com/wp-content/uploads/2026/07/hero-bg_f6607437.webp');
+    background-image: url('https://raghaliabida.com/wp-content/uploads/2026/07/hero-bg_f6607437.webp');
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
     color:#fff;
+  }
+  .hero::before{
+    content:'';
+    position:absolute;inset:0;
+    background: linear-gradient(90deg, rgba(23,29,74,.1) 0%, rgba(23,29,74,.3) 30%, rgba(23,29,74,.85) 60%, rgba(23,29,74,.95) 100%);
+    z-index:1;
   }
   .hero-grid{display:grid;grid-template-columns:1fr;gap:30px;align-items:center;position:relative;z-index:2;}
   .hero h1{font-size:clamp(1.8rem,5.5vw,3.4rem);margin-bottom:18px;color:#fff;}
@@ -606,8 +610,8 @@
   <div class="bubbles" id="heroBubbles"></div>
   <div class="container hero-grid">
     <div>
-      <h1>أفضل شركة <span>تنظيف واجهات زجاج</span> وكلادينج بالرياض</h1>
-      <p class="sub">تنظيف احترافي للواجهات الزجاجية، الكلادينج، البلاط والأرضيات، والفلل — بفريق خبير ومعدات حديثة، ومعاينة مجانية لجميع أحياء الرياض.</p>
+      <h1>شركة تنظيف واجهات ومبانٍ بالرياض</h1>
+      <p class="sub">تنظيف الواجهات الزجاجية والكلادينج، وجلي وتلميع البلاط والأرضيات، وتنظيف الفلل والشقق بمدينة الرياض، مع إمكانية إرسال صور الموقع للحصول على تقييم أولي وتحديد الخدمة والتكلفة المناسبة.</p>
       <div class="cta-row">
         <a href="https://wa.me/966534336007" target="_blank" rel="noopener" class="btn btn-whatsapp">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.72 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -619,9 +623,10 @@
         </a>
       </div>
       <div class="trust-bar">
-        <span><span class="tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>معاينة مجانية</span>
-        <span><span class="tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>فريق محترف</span>
-        <span><span class="tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>تغطية كاملة للرياض وجدة</span>
+        <span><span class="tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>تنظيف واجهات زجاج وكلادينج</span>
+        <span><span class="tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>جلي وتنظيف وتلميع الأرضيات</span>
+        <span><span class="tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>تنظيف الفلل والشقق</span>
+        <span><span class="tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>خدمة مختلف أحياء الرياض</span>
       </div>
       <div class="stats-grid hero-stats">
         <div class="reveal">
@@ -711,6 +716,47 @@
       <p>استفسر عن تفاصيل وسعر أي خدمة عبر الواتساب الآن</p>
       <a href="https://wa.me/966534336007" target="_blank" rel="noopener" class="btn btn-whatsapp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm5.9 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.5.8 2 .9 2.1.1.2.1.3 0 .5-.1.2-.1.3-.3.5-.1.2-.3.4-.4.5-.1.1-.3.3-.1.6.2.3.9 1.5 1.9 2.4 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.6-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.8.9 2.1 1 .3.1.5.2.6.3.1.2.1.9-.1 1.6z"/></svg>
       تواصل عبر واتساب
+    </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VIDEOS ===== -->
+<section class="section section-alt" id="videos">
+  <div class="container">
+    <div class="eyebrow reveal">فيديوهاتنا</div>
+    <h2 class="section-title reveal">معرض الفيديوهات</h2>
+    <p class="section-sub reveal">شاهد فريقنا أثناء العمل الفعلي على الواجهات والمرتفعات.</p>
+    <div class="video-grid" id="videoGrid">
+      <div class="video-card reveal" data-src="https://raghaliabida.com/wp-content/uploads/2023/03/RA4Clean-22.mp4">
+        <video muted preload="metadata"><source src="https://raghaliabida.com/wp-content/uploads/2023/03/RA4Clean-22.mp4#t=0.5"></video>
+        <div class="play-btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--primary)"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="video-card reveal" data-src="https://raghaliabida.com/wp-content/uploads/2023/03/RA4Clean-21.mp4">
+        <video muted preload="metadata"><source src="https://raghaliabida.com/wp-content/uploads/2023/03/RA4Clean-21.mp4#t=0.5"></video>
+        <div class="play-btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--primary)"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="video-card reveal" data-src="https://raghaliabida.com/wp-content/uploads/2023/03/RA4Clean-20.mp4">
+        <video muted preload="metadata"><source src="https://raghaliabida.com/wp-content/uploads/2023/03/RA4Clean-20.mp4#t=0.5"></video>
+        <div class="play-btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--primary)"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="video-card reveal" data-src="https://raghaliabida.com/wp-content/uploads/2023/03/RA4Clean-19-2.mp4">
+        <video muted preload="metadata"><source src="https://raghaliabida.com/wp-content/uploads/2023/03/RA4Clean-19-2.mp4#t=0.5"></video>
+        <div class="play-btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--primary)"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="video-card reveal" data-src="https://raghaliabida.com/wp-content/uploads/2023/03/RA4Clean-19.mp4">
+        <video muted preload="metadata"><source src="https://raghaliabida.com/wp-content/uploads/2023/03/RA4Clean-19.mp4#t=0.5"></video>
+        <div class="play-btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--primary)"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="video-card reveal" data-src="https://raghaliabida.com/wp-content/uploads/2022/04/%D9%81%D9%8A%D8%AF%D9%8A%D9%88.mp4">
+        <video muted preload="metadata"></video>
+        <div class="play-btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--primary)"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+    </div>
+    <div class="section-cta reveal">
+      <p>تواصل معنا عبر الواتساب لحجز موعد تنظيف لمبناك</p>
+      <a href="https://wa.me/966534336007" target="_blank" rel="noopener" class="btn btn-whatsapp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm5.9 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.5.8 2 .9 2.1.1.2.1.3 0 .5-.1.2-.1.3-.3.5-.1.2-.3.4-.4.5-.1.1-.3.3-.1.6.2.3.9 1.5 1.9 2.4 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.6-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.8.9 2.1 1 .3.1.5.2.6.3.1.2.1.9-.1 1.6z"/></svg>
+      احجز موعدك الآن
     </a>
     </div>
   </div>
@@ -840,43 +886,24 @@
   </div>
 </section>
 
-<!-- ===== VIDEOS ===== -->
-<section class="section section-alt" id="videos">
+<!-- ===== WHO WE SERVE ===== -->
+<section class="section section-alt" id="who-we-serve">
   <div class="container">
-    <div class="eyebrow reveal">فيديوهاتنا</div>
-    <h2 class="section-title reveal">معرض الفيديوهات</h2>
-    <p class="section-sub reveal">شاهد فريقنا أثناء العمل الفعلي على الواجهات والمرتفعات.</p>
-    <div class="video-grid" id="videoGrid">
-      <div class="video-card reveal" data-src="https://raghaliabida.com/wp-content/uploads/2023/03/RA4Clean-22.mp4">
-        <video muted preload="metadata"><source src="https://raghaliabida.com/wp-content/uploads/2023/03/RA4Clean-22.mp4#t=0.5"></video>
-        <div class="play-btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--primary)"><path d="M8 5v14l11-7z"/></svg></div>
+    <div class="eyebrow reveal">من نخدم؟</div>
+    <h2 class="section-title reveal">خدمات تنظيف للمباني والمنشآت والمنازل</h2>
+    <div class="areas-wrap">
+      <div class="areas-list">
+        <div class="area-chip reveal"><span class="pin"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></span>الأبراج والمباني الإدارية</div>
+        <div class="area-chip reveal"><span class="pin"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></span>الشركات والمكاتب</div>
+        <div class="area-chip reveal"><span class="pin"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg></span>المحلات والمعارض</div>
+        <div class="area-chip reveal"><span class="pin"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>المطاعم والمقاهي</div>
+        <div class="area-chip reveal"><span class="pin"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></span>الفنادق والمنشآت</div>
+        <div class="area-chip reveal"><span class="pin"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg></span>المجمعات التجارية</div>
+        <div class="area-chip reveal"><span class="pin"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></span>الفلل والمباني السكنية</div>
+        <div class="area-chip reveal"><span class="pin"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></span>الشقق والمنازل</div>
+        <div class="area-chip reveal"><span class="pin"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg></span>اللوحات والواجهات الخارجية</div>
+        <div class="area-chip reveal"><span class="pin"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-5"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span>المواقع بعد التشطيب</div>
       </div>
-      <div class="video-card reveal" data-src="https://raghaliabida.com/wp-content/uploads/2023/03/RA4Clean-21.mp4">
-        <video muted preload="metadata"><source src="https://raghaliabida.com/wp-content/uploads/2023/03/RA4Clean-21.mp4#t=0.5"></video>
-        <div class="play-btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--primary)"><path d="M8 5v14l11-7z"/></svg></div>
-      </div>
-      <div class="video-card reveal" data-src="https://raghaliabida.com/wp-content/uploads/2023/03/RA4Clean-20.mp4">
-        <video muted preload="metadata"><source src="https://raghaliabida.com/wp-content/uploads/2023/03/RA4Clean-20.mp4#t=0.5"></video>
-        <div class="play-btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--primary)"><path d="M8 5v14l11-7z"/></svg></div>
-      </div>
-      <div class="video-card reveal" data-src="https://raghaliabida.com/wp-content/uploads/2023/03/RA4Clean-19-2.mp4">
-        <video muted preload="metadata"><source src="https://raghaliabida.com/wp-content/uploads/2023/03/RA4Clean-19-2.mp4#t=0.5"></video>
-        <div class="play-btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--primary)"><path d="M8 5v14l11-7z"/></svg></div>
-      </div>
-      <div class="video-card reveal" data-src="https://raghaliabida.com/wp-content/uploads/2023/03/RA4Clean-19.mp4">
-        <video muted preload="metadata"><source src="https://raghaliabida.com/wp-content/uploads/2023/03/RA4Clean-19.mp4#t=0.5"></video>
-        <div class="play-btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--primary)"><path d="M8 5v14l11-7z"/></svg></div>
-      </div>
-      <div class="video-card reveal" data-src="https://raghaliabida.com/wp-content/uploads/2022/04/%D9%81%D9%8A%D8%AF%D9%8A%D9%88.mp4">
-        <video muted preload="metadata"></video>
-        <div class="play-btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--primary)"><path d="M8 5v14l11-7z"/></svg></div>
-      </div>
-    </div>
-    <div class="section-cta reveal">
-      <p>تواصل معنا عبر الواتساب لحجز موعد تنظيف لمبناك</p>
-      <a href="https://wa.me/966534336007" target="_blank" rel="noopener" class="btn btn-whatsapp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm5.9 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.5.8 2 .9 2.1.1.2.1.3 0 .5-.1.2-.1.3-.3.5-.1.2-.3.4-.4.5-.1.1-.3.3-.1.6.2.3.9 1.5 1.9 2.4 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.6-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.8.9 2.1 1 .3.1.5.2.6.3.1.2.1.9-.1 1.6z"/></svg>
-      احجز موعدك الآن
-    </a>
     </div>
   </div>
 </section>
@@ -912,24 +939,47 @@
 <section class="section section-alt" id="faq">
   <div class="container">
     <div class="eyebrow reveal center" style="display:block;text-align:center;">الأسئلة الشائعة</div>
-    <h2 class="section-title reveal center">أسئلة يتكرر طرحها</h2>
-    <p class="section-sub reveal center">إجابات سريعة على أكثر الأسئلة شيوعاً حول خدماتنا.</p>
+    <h2 class="section-title reveal center">أسئلة شائعة عن خدمات التنظيف بالرياض</h2>
     <div class="faq-list">
       <div class="faq-item reveal">
-        <div class="faq-q"><span>هل المعاينة مجانية فعلاً؟</span><span class="plus">+</span></div>
-        <div class="faq-a"><p>نعم، نقدم معاينة مجانية بالكامل لجميع أحياء الرياض ومدينة جدة قبل تحديد أي سعر أو التزام.</p></div>
+        <div class="faq-q"><span>ما أسعار تنظيف الواجهات الزجاجية؟</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>يختلف السعر حسب مساحة الواجهة، ارتفاع المبنى، نوع الزجاج، مستوى الاتساخ وطريقة الوصول. أرسل صور الموقع للحصول على تقييم أولي، ثم يتم تأكيد السعر بعد معرفة التفاصيل أو إجراء المعاينة عند الحاجة.</p></div>
       </div>
       <div class="faq-item reveal">
-        <div class="faq-q"><span>ما هي أسعار تنظيف الواجهات؟</span><span class="plus">+</span></div>
-        <div class="faq-a"><p>يعتمد السعر على مساحة الواجهة ونوعها وارتفاع المبنى، ونقدم عرض سعر دقيق بعد المعاينة المجانية مباشرة.</p></div>
+        <div class="faq-q"><span>ما أسعار تنظيف الكلادينج؟</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>تعتمد التكلفة على مساحة ألواح الكلادينج وارتفاع الواجهة وحالتها وطبيعة البقع وطريقة الوصول. تساعد الصور في تقديم تقييم أولي للخدمة.</p></div>
       </div>
       <div class="faq-item reveal">
-        <div class="faq-q"><span>هل تقدمون عقود تنظيف شهرية وسنوية؟</span><span class="plus">+</span></div>
-        <div class="faq-a"><p>نعم، نوفر باقات صيانة دورية مرنة شهرية وسنوية للمباني التجارية والفلل بأسعار تفضيلية.</p></div>
+        <div class="faq-q"><span>كم سعر جلي وتلميع الأرضيات؟</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>يتم تحديد السعر وفق نوع الأرضية ومساحتها وحالتها ونوع الخدمة المطلوبة. أرسل صورة الأرضية ومساحتها التقريبية للحصول على تقييم أولي.</p></div>
       </div>
       <div class="faq-item reveal">
-        <div class="faq-q"><span>هل استخدام أدوات القذف المائي آمن على الكلادينج والزجاج؟</span><span class="plus">+</span></div>
-        <div class="faq-a"><p>نعم، نستخدم أجهزة قذف مائي بضغط مضبوط ومواد آمنة معتمدة لا تسبب أي خدوش أو تلف للأسطح.</p></div>
+        <div class="faq-q"><span>كيف يتم تحديد سعر تنظيف الفلل والشقق؟</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>يعتمد السعر على نوع العقار ومساحته وعدد الغرف ودورات المياه، وما إذا كان مفروشًا أو فارغًا، ونوع التنظيف المطلوب.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><span>هل المعاينة مجانية؟</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>يتم تحديد الحاجة إلى المعاينة وتفاصيلها حسب نوع الموقع والخدمة. أرسل الصور والموقع للتأكد من توفر المعاينة وشروطها.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><span>هل تنظفون واجهات الأبراج والارتفاعات؟</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>نقدم خدمات تنظيف لواجهات مبانٍ بارتفاعات مختلفة، ويتم تحديد وسيلة الوصول المناسبة بعد مراجعة الموقع.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><span>هل ضغط المياه مناسب للزجاج والكلادينج؟</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>تختلف طريقة التنظيف حسب نوع السطح وحالته. يتم التحكم في مستوى الضغط واختيار الأدوات والمواد المناسبة وفق حالة الواجهة.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><span>هل يمكن معرفة السعر من الصور؟</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>تساعد الصور في تقديم تقييم أولي، لكن بعض المواقع تحتاج إلى معاينة لتحديد المساحة وطريقة الوصول والتكلفة بدقة.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><span>كم تستغرق الخدمة؟</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>تعتمد المدة على نوع الخدمة ومساحة الموقع وحالته وسهولة الوصول. يتم توضيح المدة المتوقعة قبل بدء التنفيذ.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><span>هل تقدمون خدمات في جميع أحياء الرياض؟</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>نعم، يتم استقبال الطلبات من مختلف أحياء الرياض. أرسل موقعك عبر واتساب للتأكد من توفر الموعد والخدمة المطلوبة.</p></div>
       </div>
     </div>
   </div>
