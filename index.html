@@ -124,6 +124,7 @@
   .nav-links{display:none;gap:6px;align-items:center;background:var(--bg-soft);padding:5px;border-radius:50px;}
   .nav-links a{font-weight:700;color:var(--ink-soft);font-size:.85rem;position:relative;padding:8px 14px;border-radius:50px;transition:color .2s, background .2s;white-space:nowrap;}
   .nav-links a:hover{color:var(--primary);background:#fff;box-shadow:var(--shadow-sm);}
+  .nav-links a.active{color:var(--primary);background:#fff;box-shadow:var(--shadow-sm);}
   .nav-actions{display:flex;gap:8px;align-items:center;flex-shrink:0;}
   .icon-btn{
     display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 16px;border-radius:10px;
@@ -152,6 +153,7 @@
   .mobile-overlay{display:none;position:fixed;inset:0;background:rgba(20,25,60,.5);z-index:1100;}
   .mobile-overlay.open{display:block;}
   .mobile-menu a{display:flex;align-items:center;gap:10px;padding:14px 4px;border-bottom:1px solid #eee;font-weight:700;color:var(--ink);}
+  .mobile-menu a.active{color:var(--primary);background:var(--bg-soft);border-radius:8px;padding:14px 12px;}
   .mobile-menu .close-mm{align-self:flex-start;font-size:1.3rem;color:var(--primary);margin-bottom:14px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:10px;}
   .mobile-menu .close-mm:hover{background:var(--bg-soft);}
   .mobile-menu .mm-contact{margin-top:14px;display:flex;flex-direction:column;gap:10px;}
@@ -194,6 +196,7 @@
   @media(max-width:480px){
     .hero{padding:90px 0 50px;}
     .hero-badge{margin-top:16px;}
+    
   }
   @media(max-width:640px){
     .hero{background-image:url('https://raghaliabida.com/wp-content/uploads/2026/08/phonbg.png');background-position:top center;}
@@ -620,8 +623,10 @@
     </a>
     <nav class="nav-links">
       <a href="#services">خدماتنا</a>
+      <!-- <a href="#videos">فيديوهاتنا</a> -->
+      <a href="#why">لماذا نحن</a>
       <a href="#gallery">أعمالنا</a>
-      <a href="#videos">فيديوهاتنا</a>
+      <a href="#who-we-serve">من نخدم</a>
       <a href="#areas">نطاق الخدمة</a>
       <a href="#faq">الأسئلة الشائعة</a>
     </nav>
@@ -647,8 +652,10 @@
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
   </button>
   <a href="#services">خدماتنا</a>
+  <!-- <a href="#videos">فيديوهاتنا</a> -->
+  <a href="#why">لماذا نحن</a>
   <a href="#gallery">أعمالنا</a>
-  <a href="#videos">فيديوهاتنا</a>
+  <a href="#who-we-serve">من نخدم</a>
   <a href="#areas">نطاق الخدمة</a>
   <a href="#faq">الأسئلة الشائعة</a>
   <div class="mm-contact">
@@ -1395,7 +1402,7 @@
         <ul>
           <li><a href="#services">خدماتنا</a></li>
           <li><a href="#gallery">أعمالنا</a></li>
-          <li><a href="#videos">فيديوهاتنا</a></li>
+          <!-- <li><a href="#videos">فيديوهاتنا</a></li> -->
           <li><a href="#areas">نطاق الخدمة</a></li>
           <li><a href="#faq">الأسئلة الشائعة</a></li>
         </ul>
@@ -1662,6 +1669,33 @@ testiNext.addEventListener('click', ()=>{
 
 window.addEventListener('resize', updateSlidesPerView);
 updateSlidesPerView();
+
+// ===== Active nav link on scroll =====
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a, .mobile-menu a');
+
+function updateActiveNav() {
+  let current = '';
+  const scrollPosition = window.scrollY + 150;
+  
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+      current = section.getAttribute('id');
+    }
+  });
+  
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', updateActiveNav);
+updateActiveNav();
 </script>
 </body>
 </html>
